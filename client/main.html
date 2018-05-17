@@ -1,0 +1,35 @@
+<head>
+  <title>I IAM Talent day</title>
+</head>
+
+<body>
+    <header>
+  <h1>Benvinguts al Talent Day!</h1>
+ <h2> Vots emesos</h2>
+  {{> vots}}
+</header>
+  <div class="container">
+ 
+    {{> equips}}
+
+  </div>
+</body>
+
+<template name="vots">
+
+
+  {{#each equips}}
+  Equip {{equip}} Num vots{{nvots}}<br>
+{{/each}}
+
+
+
+</template>
+
+
+<template name="equips">
+  <button class="bt1">Equip 1</button>
+  <button class="bt2">Equip 2</button>
+  <button class="bt3">Equip 3</button>
+  <button class="bt4">Equip 4</button>
+</template>
