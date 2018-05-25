@@ -36,15 +36,60 @@ Template.vots.helpers({
 //    return Vots.find({}).sort({nvots:-1});
     return Vots.find({})
 },
-  equips() {
-    return Equips.find({}, {sort: {nvots: -1}});
+/*equips() {
+  return Equips.find({}, {sort: {nvots: -1}});
+
+},*/
+posicio(n){
+  return n+1;
+},
+color(n){
+  const colors=['bg-success','bg-success','bg-success','bg-success'];
+  return colors(n);
+},
+ equips() {
+
+  const eq2=Equips.find({},{nvots:1,_id:0},{sort: {nvots:-1}, limit:1});
+    let max=0;
+    eq2.forEach((equip) => {
+      console.log(equip.nvots);
+      if (equip.nvots > max) max=equip.nvots;
+    });
+
+  const eq=Equips.find({}, {sort: {nvots: -1}});
   
+  let arEquipos=[];
+  eq.forEach((equip) => {
+    var a={ "equip": equip.equip, "nvots":equip.nvots, "pct":parseInt((equip.nvots/max)*100)};
+    console.log(a)
+    arEquipos.push(a)
+  });
+
+  /*let arEquipos =[
+    { "equip": 1, "nvots":10, "pct":10},
+    { "equip": 2, "nvots":10, "pct":10},
+    { "equip": 3, "nvots":10, "pct":10},
+    { "equip": 4, "nvots":10, "pct":10}
+
+  ]*/
+  console.log(arEquipos)
+  return arEquipos;
 },
   acumulats(){
     return [];/*Vots.aggregate([
       {"$group":{_id:"$Equip",count:{$sum:1}}},
       {$sort:{count:-1}}
     ])*/
+  },
+  maxVots(){
+    const eq=Equips.find({},{nvots:1,_id:0},{sort: {nvots:-1}, limit:1});
+    let max=0;
+    eq.forEach((equip) => {
+      console.log(equip.nvots);
+      if (equip.nvots > max) max=equip.nvots;
+    });
+    console.log(max);
+    return max;
   }
 });
 
