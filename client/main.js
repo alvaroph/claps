@@ -13,6 +13,21 @@ Template.equips.helpers({
   counter() {
     return Template.instance().counter.get();
   },
+  nomeq(num){
+    const noms=['','Autify','ManifestApp','BarcelonApp','bg-success'];
+    return noms[n];
+  },llista(){
+    const tmp=[{nom: 'Autify', colorBot :"btn-primary" },
+    {nom: 'ManifestApp', colorBot :"btn-secondary" },
+    {nom: 'BarcelonApp', colorBot :"btn-success" },
+    {nom: 'TAccess', colorBot :"btn-danger" },
+    {nom: 'eTorn', colorBot :"btn-warning" },
+    {nom: 'BerryLan', colorBot :"btn-info" },
+    {nom: 'Docker4All', colorBot :"btn-dark" }
+    ];
+    return tmp;
+    
+  }
 });
 
 Template.equips.events({
@@ -44,8 +59,8 @@ posicio(n){
   return n+1;
 },
 color(n){
-  const colors=['bg-success','bg-success','bg-success','bg-success'];
-  return colors(n);
+  const colors=['bg-success','bg-warning','bg-success','bg-success'];
+  return colors[n];
 },
  equips() {
 

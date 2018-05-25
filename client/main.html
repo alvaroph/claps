@@ -9,24 +9,21 @@
 
       
 
-        <div class="page-header">
-            <nav class="navbar navbar-expand-lg navbar-light bg-light">
-                <a class="navbar-brand" href="#">IAM</a>
-                <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                  <span class="navbar-toggler-icon"></span>
-                </button>
+        
               
           
           <div class="container-fluid">
-              <h1>Benvinguts al Talent Day!<br> <small>Vots emesos</small></h1>
-
+             
             <div class="row">
                   <div class="col-xs-1"></div>
                 <div class="col-xs-10 offset-xs-1">
+
+                    <h1>Benvinguts al Talent Day!<br> <small>Vots emesos</small></h1>
+
                   {{> vots}}
                 
               </div>
-              </div>
+            </div>
           </div>
 </header>
  
@@ -35,7 +32,7 @@
 </body>
 <template name="vots">
 
-<h3>
+<h5>
     <table class="table table-striped">
         <thead>
           <tr>
@@ -48,21 +45,17 @@
         <tbody>
 
             {{#each equips}}
-            
-              
-          
-                <tr>
+             <tr>
                     <th scope="row">{{posicio @index}}</th>
                     <td>Equip {{equip}} </td>
-                    <td><div class="progress"><div class="progress-bar {{color @index}}" role="progressbar" style="width: {{pct}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div></div> </td>
+                    <td><div class="progress"><div class="progress-bar {{color _id}}" role="progressbar" style="width: {{pct}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div></div> </td>
                     <td> <span class="label label-success">{{nvots}}</span></td>
-                  </tr>
-          
+               </tr>
              {{/each}}
         </tbody>
       </table>
 
-</h3>
+</h5>
 <br>
 
 </template>
@@ -74,10 +67,20 @@
         <div class="row">
             <div class="col-xs-2"></div>
           <div class="col-xs-8 offset-xs-2">
-              <button class="bt1 btn btn-lg btn-primary">Equip 1</button>
+
+              {{#each llista}}
+                  <button class="bt1 btn btn-lg {{colorBot}}">{{nom}}</button>
+
+              {{/each}}
+
+              <br>
+              <button class="bt1 btn btn-lg btn-primary">{{nomeq 1}}</button>
               <button class="bt2 btn btn-lg btn-success">Equip 2</button>
               <button class="bt3 btn btn-lg btn-danger">Equip 3</button>
               <button class="bt4 btn btn-lg btn-warning">Equip 4</button>
+              <button class="bt5 btn btn-lg btn-success">Equip 5</button>
+              <button class="bt6 btn btn-lg btn-danger">Equip 6</button>
+              <button class="bt7 btn btn-lg btn-warning">Equip 7</button>
             </div>
         </div>
     </div>
