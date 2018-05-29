@@ -21,7 +21,7 @@
                   
                     <img src="logo_iam.png" width="100px">
               </div>
-              <div class="col-xs-4 offset-xs-2">
+              <div class="col-xs-6 ml-auto">
 
                 <img src="logo.png" width="150px">
 
@@ -29,7 +29,7 @@
                 
             </div>
             <div class="row">
-                <div class="col-xs-10 offset-xs-1">
+                <div class="col">
                   {{> vots}}
                 
               </div>
@@ -46,7 +46,7 @@
     <table class="table table-striped">
         <thead>
           <tr>
-            <th scope="col">Posició</th>
+            <th scope="col">#</th>
             <th scope="col">Equip</th>
             <th scope="col">Progrés</th>
             <th scope="col">Vots</th>
@@ -57,8 +57,8 @@
             {{#each equips}}
              <tr>
                     <th scope="row">{{posicio @index}}</th>
-                    <td>Equip {{equip}} </td>
-                    <td><div class="progress"><div class="progress-bar {{color _id}}" role="progressbar" style="width: {{pct}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div></div> </td>
+                    <td> <img src="{{imatge}}">  {{nom}} </td>
+                    <td><div class="progress"><div class="progress-bar {{color}}" role="progressbar" style="width: {{pct}}%" aria-valuenow="25" aria-valuemin="0" aria-valuemax="100"></div></div> </td>
                     <td> <span class="label label-success">{{nvots}}</span></td>
                </tr>
              {{/each}}
@@ -76,21 +76,21 @@
     <div class="container-fluid">
         <div class="row">
             <div class="col-xs-2"></div>
-          <div class="col-xs-8 offset-xs-2">
+          <div class="col-xs-12">
 
               {{#each llista}}
-                  <button class="{{classBot}} btn btn-lg {{colorBot}}">{{nom}}</button>
+                  <button style="margin:10px" class="{{classBot}} btn btn-lg {{colorBot}}">{{nom}}</button>
 
               {{/each}}
 
-              <br>
+              <!--br>
               <button class="bt1 btn btn-lg btn-primary">{{nomeq 1}}</button>
               <button class="bt2 btn btn-lg btn-success">Equip 2</button>
               <button class="bt3 btn btn-lg btn-danger">Equip 3</button>
               <button class="bt4 btn btn-lg btn-warning">Equip 4</button>
               <button class="bt5 btn btn-lg btn-success">Equip 5</button>
               <button class="bt6 btn btn-lg btn-danger">Equip 6</button>
-              <button class="bt7 btn btn-lg btn-warning">Equip 7</button>
+              <button class="bt7 btn btn-lg btn-warning">Equip 7</button-->
             </div>
         </div>
     </div>
