@@ -17,13 +17,13 @@ Template.equips.helpers({
     const noms=['','Autify','ManifestApp','BarcelonApp','bg-success'];
     return noms[n];
   },llista(){
-    const tmp=[{nom: 'Autify', colorBot :"btn-primary" },
-    {nom: 'ManifestApp', colorBot :"btn-secondary" },
-    {nom: 'BarcelonApp', colorBot :"btn-success" },
-    {nom: 'TAccess', colorBot :"btn-danger" },
-    {nom: 'eTorn', colorBot :"btn-warning" },
-    {nom: 'BerryLan', colorBot :"btn-info" },
-    {nom: 'Docker4All', colorBot :"btn-dark" }
+    const tmp=[{nom: 'Autify', colorBot :"btn-primary" , classBot : "bt1"},
+    {nom: 'ManifestApp', colorBot :"btn-secondary", classBot : "bt2"},
+    {nom: 'BarcelonApp', colorBot :"btn-success", classBot : "bt3" },
+    {nom: 'TAccess', colorBot :"btn-danger" , classBot : "bt4"},
+    {nom: 'eTorn', colorBot :"btn-warning", classBot : "bt5" },
+    {nom: 'BerryLan', colorBot :"btn-info", classBot : "bt6" },
+    {nom: 'Docker4All', colorBot :"btn-dark" , classBot : "bt7"}
     ];
     return tmp;
     
