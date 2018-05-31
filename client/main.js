@@ -85,7 +85,7 @@ colorxx(n){
   {nom: 'Docker4All', colorBot :"btn-dark" , classBot : "bt7"}
   ];
 
-  const colores=['bg-primary','bg-secondary','bg-success','bg-danger','bd-warning','bg-info','bg-dark'];
+  const colores=['bg-primary','bg-secondary','bg-success','bg-danger','bg-warning','bg-info','bg-dark'];
 
   //CODIGO PARA CALCULAR EL MÁXIMO DE VOTOS
   const eq2=Equips.find({},{nvots:1,_id:0},{sort: {nvots:-1}, limit:1});
